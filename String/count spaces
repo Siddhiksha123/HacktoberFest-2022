@@ -1,0 +1,39 @@
+/* program to count spaces in a string
+
+Write a program which calculate number of spaces in a string using pointer. Make a separate function which takes a pointer and using for loop it calculates all spaces.
+This example covers the concept of 
+
+    pointers in c++
+    functions
+    loop
+
+C++ source code */
+
+#include <iostream>
+using namespace std;
+void Calculate_Spaces_alpha(char *);
+int main()
+{
+ char string [] = "This string contains four spaces";
+ cout <<"String is "<<"\n%----------------------%\n" << string << endl;
+ char *str = string;
+ Calculate_Spaces_alpha(str);
+ return 0;
+}
+
+void Calculate_Spaces_alpha(char *ptr)
+{
+ int spaces = 0;
+ int characters = 0;
+ for ( ; ; ptr++)
+ {
+  if (*ptr == ' ')
+   spaces++;
+
+  if (*ptr != '\0')
+   characters++;
+  else
+   break;
+ }
+ cout << "\nIn the String: "<< endl << "Characters:  "<< characters << endl <<"Spaces:  " << spaces << endl;
+}
